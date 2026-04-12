@@ -46,8 +46,10 @@ export function WoundChart({ result }: WoundChartProps) {
             color: '#f3f4f6',
             fontSize: '13px',
           }}
-          formatter={(value: number) => [`${value.toFixed(2)}%`, 'Probability']}
-          labelFormatter={(label: number) => `${label} wounds`}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          formatter={(value: any) => [`${Number(value).toFixed(2)}%`, 'Probability']}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          labelFormatter={(label: any) => `${label} wounds`}
         />
         <ReferenceArea
           x1={p10}
