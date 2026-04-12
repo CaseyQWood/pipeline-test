@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  /* Warhammer-inspired dark palette */
+  --color-primary: #8b0000;        /* deep blood red */
+  --color-primary-light: #b22222;  /* firebrick */
+  --color-gold: #c9a84c;           /* imperial gold */
+  --color-surface: #1a1a2e;        /* dark navy */
+  --color-surface-dark: #0f0f1a;   /* near-black */
+  --color-surface-light: #252540;  /* slightly lighter surface */
+}
+
+html,
+body {
+  background-color: var(--color-surface-dark, #0f0f1a);
+  color: #f1f1f1;
+  font-family: system-ui, sans-serif;
+}
